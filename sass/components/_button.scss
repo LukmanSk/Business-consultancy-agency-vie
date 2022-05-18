@@ -1,0 +1,18 @@
+.btn {
+  font-size: 1.3rem;
+  padding: 1.5rem 3.5rem;
+  border-radius: 3px;
+  display: inline-block;
+  transition: all 0.3s;
+}
+
+.btn__white {
+  color: $color-black;
+  outline: 1px solid $color-black;
+
+  &:hover {
+    color: $color-white;
+    background-color: $color-black;
+    outline: none;
+  }
+}

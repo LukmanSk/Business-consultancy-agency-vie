@@ -1,0 +1,33 @@
+.card {
+  padding: 4rem;
+  box-shadow: 0rem 0rem 0.1rem rgba($color-black, 0.7);
+  border-radius: 1rem;
+  &__icon {
+    display: inline-block;
+    padding: 2rem;
+    clip-path: circle();
+    color: white;
+    @include background-gradient(
+      rgba($color-blue, 0.3),
+      rgba($color-purple, 0.3),
+      rgba($color-red, 0.3)
+    );
+    i {
+      display: inline-block;
+      font-size: 2rem;
+    }
+  }
+  &__head {
+    font-size: 1.4rem;
+    font-weight: 500;
+  }
+  &__para {
+    font-size: 1.4rem;
+  }
+  &__video-card {
+    display: inline-block;
+    background-color: $color-dark;
+    color: $color-white;
+    border-radius: none;
+  }
+}

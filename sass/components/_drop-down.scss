@@ -1,0 +1,55 @@
+.drop-down {
+  position: absolute;
+  top: 3rem;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.sub-menu {
+  background-color: $color-white-dark;
+  padding: 1rem 0;
+  min-width: 13rem;
+  list-style: none;
+  min-width: 18rem;
+  position: absolute;
+  top: 10.3rem;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+  backface-visibility: hidden;
+
+  &__item {
+    padding: 1rem 2.5rem;
+  }
+  &__link {
+    font-size: 1.3rem;
+    color: $color-dark;
+    // border: 1px solid #000;
+    display: inline-block;
+    position: relative;
+    transition: all 0.4s;
+    &::before {
+      content: "";
+      height: 1px;
+      width: 0%;
+      position: absolute;
+      top: 1rem;
+      left: -2.5rem;
+
+      background-color: $color-blue;
+    }
+  }
+  &__item:hover &__link {
+    &::before {
+      animation: incrase-width;
+      animation-duration: 0.5s;
+      width: 1rem;
+    }
+    transform: translateX(1rem);
+    color: $color-blue;
+  }
+}

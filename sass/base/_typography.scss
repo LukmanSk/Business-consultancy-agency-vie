@@ -1,0 +1,137 @@
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: $color-black;
+}
+
+.heading-secondary {
+  font-size: 1.2rem;
+  font-weight: 400;
+  border-radius: 0.5rem;
+
+  &__main {
+    display: inline-block;
+    padding: 0.7rem 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    border-radius: 1rem;
+  }
+
+  &__section-head {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    @include respond(desktop) {
+      font-size: 1.7rem;
+      letter-spacing: 7px;
+      font-weight: 300;
+    }
+  }
+  &--medium {
+    font-size: 1.5rem;
+    text-transform: capitalize;
+  }
+  &--big {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: $color-black;
+  }
+}
+
+.heading-primary {
+  font-size: 3.5rem;
+  line-height: 1.2;
+  font-weight: 600;
+  color: $color-black;
+  @include respond(tab-land) {
+    font-size: 4.5rem;
+  }
+  @include respond(desktop) {
+    font-size: 5.5rem;
+  }
+  &__section-head {
+    font-size: 2rem;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    @include respond(tab-port) {
+      font-size: 3rem;
+      max-width: 77rem;
+
+      margin: 0 auto;
+      line-height: 1.4;
+    }
+    @include respond(desktop) {
+      font-size: 4.8rem;
+    }
+  }
+  &--small {
+    font-size: 3.5rem;
+  }
+}
+.para {
+  font-size: 1.6rem;
+  color: $color-grey;
+  line-height: 1.8;
+
+  &__sub-head {
+    text-transform: uppercase;
+    font-weight: 400;
+    a {
+      color: $color-grey-2;
+      font-size: 1.3rem;
+      letter-spacing: 2px;
+      &:not(:last-child) {
+        margin-right: 1rem;
+      }
+    }
+    &--block {
+      display: block;
+    }
+  }
+  &__small {
+    font-size: 1.3rem;
+    font-weight: 300;
+  }
+  &--footer {
+    span {
+      color: $color-blue;
+    }
+  }
+}
+
+.headnig-tertiary {
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  line-height: 1;
+  &--big {
+    font-size: 2.5rem;
+    text-transform: capitalize;
+  }
+}
+.cta {
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 1rem;
+  font-size: 1.2rem;
+  position: relative;
+  padding: 1rem 0.2rem;
+  &::after {
+    content: "";
+    height: 0.2rem;
+    width: 25%;
+    @include background-gradient();
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transition: all 0.5s;
+  }
+
+  &:hover::after {
+    width: 95%;
+  }
+}

@@ -1,0 +1,54 @@
+.grid {
+  &__container {
+    display: grid;
+    justify-items: center;
+    padding: 5rem 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 4rem;
+    @include respond(desktop) {
+      grid-template-columns: repeat(auto-fit, minmax(34rem, 1fr));
+      padding: 5rem 0;
+    }
+    &--team {
+      grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+      @include respond(desktop) {
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+      }
+    }
+  }
+
+  &__item {
+    width: 100%;
+    @include respond(desktop) {
+      &:nth-child(2) {
+        margin-top: 4rem;
+      }
+      &:nth-child(5) {
+        margin-top: 4rem;
+      }
+    }
+    @include respond(tab-port) {
+      max-width: 55rem;
+    }
+  }
+  &__img-box {
+    width: 100%;
+  }
+  &__img {
+    width: 100%;
+  }
+}
+
+.grid__container {
+  &-team {
+    padding: 0 2rem;
+    display: grid;
+    gap: 3rem;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    justify-items: center;
+    gap: 4rem;
+    @include respond(desktop) {
+      padding: 0;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+.hamburger {
+  &__icon {
+    display: block;
+    height: 0.2rem;
+    width: 2.5rem;
+    background-color: $color-black;
+    &:not(:last-child) {
+      margin-bottom: 0.5rem;
+    }
+    border-radius: 3px;
+  }
+  @include respond(tab-port) {
+    display: none;
+  }
+}
